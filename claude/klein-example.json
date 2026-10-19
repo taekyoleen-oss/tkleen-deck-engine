@@ -1,0 +1,78 @@
+{
+ "format": "tkleen-deck",
+ "version": 1,
+ "meta": {"title": "하루 20분 독서 습관 만들기", "footer": "하루 20분 독서 습관 만들기 · 예시 계획", "brand": "tkLeen"},
+ "theme": {"style": "klein"},
+ "motion": {"level": "rich"},
+ "sources": {},
+ "assumptions": {"plan": "20분·주 5회·메모 한 줄은 예시 계획입니다. 외부 연구 통계가 아닙니다."},
+ "slides": [
+  {"id": "c", "layout": "cover", "kicker": "모션 템플릿 · Klein 스타일 예시", "title": "하루 20분 독서 습관 만들기",
+   "subtitle": "읽는 날 20분 · 주 5회 · 4주 — 본인이 조정하는 예시 계획",
+   "meta": [["구성", "5분 준비 + 12분 읽기 + 3분 메모"], ["횟수", "5 × 4 = 20회"]]},
+  {"id": "s1", "layout": "content", "kicker": "전체상", "title": "20분 독서, 시작·읽기·기록을 한 묶음으로",
+   "lead": "읽는 날 20분 · 주 5회 · 4주 — 본인이 조정하는 예시 계획", "steps": true, "asm": ["plan"],
+   "footnote": "20분·주 5회·메모 한 줄은 예시입니다. 습관 형성이나 독서 효과를 측정한 수치가 아닙니다.",
+   "blocks": [
+    {"type": "stats", "items": [
+     {"value": "20", "unit": "분", "label": "읽는 날 한 번에 잡는 시간\n5분 준비 + 12분 읽기 + 3분 메모",
+      "noteTitle": "20분은 예시 시작점입니다", "noteRows": [["준비", "5분"], ["읽기", "12분"], ["메모", "3분"], ["합계", "20분"]],
+      "note": "읽는 날의 한 번 시간을 세 구간으로 나눈 예시입니다. 이 시간이 최적이라는 연구 주장은 아닙니다."},
+     {"value": "5", "unit": "회", "label": "한 주에 계획하는 독서 횟수\n4주 동안 20회가 되는 예시",
+      "noteTitle": "주 5회, 4주면 20회입니다", "noteRows": [["한 주 횟수", "5회"], ["기간", "4주"], ["계산", "5 × 4 = 20회"]],
+      "note": "읽을 날짜를 본인 일정에 맞춰 잡는 예시입니다. 매일 해야 한다는 의미가 아닙니다."},
+     {"value": "1", "unit": "줄", "label": "한 번 읽고 남기는 메모\n20회 읽으면 메모도 20줄",
+      "noteTitle": "매번 한 줄이면 20회에 20줄입니다", "noteRows": [["메모 단위", "1줄/회"], ["계획 횟수", "20회"], ["계산", "20 × 1 = 20줄"]],
+      "note": "메모 한 줄을 남긴다고 가정한 계획량입니다. 메모 효과를 측정한 값이 아닙니다."}]},
+    {"type": "row", "ratio": "1:1:1", "cols": [
+     [{"type": "section", "no": "1", "title": "시작 · 자리와 시간 정하기",
+       "items": ["책 한 권과 읽을 자리를 정하고, 20분을 낼 시각을 고릅니다.", "책 한 권 · 같은 자리"]},
+      {"type": "list", "numbered": true, "items": ["책을 찾다가 시작을 놓친다", "읽을 책과 자리를 미리 정한다", "오늘 읽을 만큼부터 시작한다"]}],
+     [{"type": "section", "no": "2", "title": "읽기 · 20분 구성하기",
+       "items": [{"text": "준비 5분, 읽기 12분, 마지막 메모 3분을 잡아 봅니다.", "go": "s2", "goLabel": "시간 구성 보기", "goView": 1, "goRef": "chart"}]},
+      {"type": "stack", "title": "20분 시간표 · 예시", "unit": "분",
+       "items": [{"label": "준비", "value": 5}, {"label": "읽기", "value": 12}, {"label": "메모", "value": 3}],
+       "caption": "세 구간의 합은 20분입니다."}],
+     [{"type": "section", "no": "3", "title": "기록 · 한 줄로 닫기",
+       "items": [{"text": "책을 덮기 전에 한 줄을 적고 다음에 펼 쪽을 표시합니다.", "go": "s3", "goLabel": "나의 계획으로 조정하기", "goRef": "sim"}]},
+      {"type": "stack", "parts": false, "share": 2, "shareLabel": "20분 중 본문 읽기 비중", "unit": "분",
+       "items": [{"label": "준비", "value": 5}, {"label": "읽기", "value": 12}, {"label": "메모", "value": 3}],
+       "caption": "읽기 12분 + 준비·메모 8분 = 20분"},
+      {"type": "text", "text": "메모 1줄 × 주 5회 × 4주 = 20줄 (예시)"}]]}]},
+  {"id": "s2", "layout": "content", "kicker": "구성", "title": "같은 20분을 길이와 비율로 살펴보기",
+   "lead": "준비 5분 + 읽기 12분 + 메모 3분 = 20분",
+   "footnote": "두 그래프는 같은 20분을 표시합니다. 100칸은 구성 비율이며 사람 수나 연구 결과가 아닙니다.",
+   "blocks": [
+    {"type": "row", "ratio": "3:2", "panel": 2, "cols": [
+     [{"type": "switch", "ref": "chart", "views": [
+       {"label": "구간별 시간", "blocks": [{"type": "bars", "unit": "분", "max": 20, "caption": "독서 1회의 시간 구성 · 분",
+         "items": [{"label": "준비", "value": 5}, {"label": "읽기", "value": 12, "tone": "c2"}, {"label": "메모", "value": 3, "tone": "c3"}]}]},
+       {"label": "100칸으로 보는 구성", "blocks": [{"type": "grid", "unit": "분",
+         "items": [{"label": "준비", "value": 5}, {"label": "읽기", "value": 12}, {"label": "메모", "value": 3}],
+         "caption": "한 칸 = 전체의 1% · 합계 100칸 · 반올림 시 칸수와 정확한 비율을 함께 표시"}]}]}],
+     [{"type": "stats", "items": [{"value": "20", "unit": "분", "label": "같은 계획, 다른 보기"}]},
+      {"type": "text", "text": "막대는 시간을, 격자는 같은 시간의 비율을 보여 줍니다. 보기만 달라지고 합계는 같습니다."},
+      {"type": "table", "rows": [["준비", "5분 · 25%"], ["읽기", "12분 · 60%"], ["메모", "3분 · 15%"]], "align": ["l", "r"]},
+      {"type": "text", "text": "100칸 중 60칸이 읽기입니다. 이 배분은 자유롭게 바꿀 수 있는 예시입니다.",
+       "noteTitle": "5분·12분·3분의 같은 구성", "noteRows": [["준비", "5/20 = 25%"], ["읽기", "12/20 = 60%"], ["메모", "3/20 = 15%"], ["합계", "20분 = 100%"]],
+       "note": "막대와 100칸 격자는 같은 수치를 다르게 보여 줍니다. 둘을 서로 다른 조사로 읽지 않습니다."}]]}]},
+  {"id": "s3", "layout": "content", "kicker": "조정", "title": "레버를 바꾸면 시간·횟수·메모가 함께 변합니다",
+   "lead": "기준 계획과 비교하며 내 일정에 맞는 예시를 정해 보세요",
+   "footnote": "결과는 입력값으로 계산한 계획입니다. 실제 실행률·독서 속도·습관 형성 효과를 예측하지 않습니다.",
+   "blocks": [
+    {"type": "sim", "ref": "sim", "title": "기준 계획과 현재 계획",
+     "variables": [
+      {"key": "minutes", "label": "한 번 읽는 시간", "unit": "분/회", "min": 5, "max": 60, "step": 1, "default": 20, "baseline": 20},
+      {"key": "sessions", "label": "일주일 횟수", "unit": "회/주", "min": 1, "max": 7, "step": 1, "default": 5, "baseline": 5},
+      {"key": "weeks", "label": "계획 기간", "unit": "주", "min": 1, "max": 12, "step": 1, "default": 4, "baseline": 4}],
+     "metrics": [
+      {"label": "총시간", "unit": "시간", "decimals": 1, "formula": {"type": "product", "coefficient": 0.016666666666666666, "powers": [1, 1, 1]},
+       "expression": "분/회 × 회/주 × 주 ÷ 60", "explanation": "계획한 횟수를 모두 실행했을 때의 시간 합계입니다. 독서 효과를 뜻하지 않습니다.", "format": "hoursMinutes"},
+      {"label": "독서 횟수", "unit": "회", "decimals": 0, "formula": {"type": "product", "coefficient": 1, "powers": [0, 1, 1]},
+       "expression": "회/주 × 주", "explanation": "한 주의 독서 횟수에 계획 기간을 곱한 값입니다."},
+      {"label": "메모", "unit": "줄", "decimals": 0, "formula": {"type": "product", "coefficient": 1, "powers": [0, 1, 1]},
+       "expression": "회/주 × 주 × 1줄/회", "explanation": "매번 한 줄씩 메모한다고 가정한 계획량입니다. 실제 기록 결과가 아닙니다."}],
+     "labels": {"baseline": "기준 계획", "current": "현재 계획", "difference": "기준 대비", "reset": "기준값으로 초기화"},
+     "caption": "레버는 계획량을 바꿉니다. 실천 가능성은 본인이 정합니다."}]}
+ ]
+}

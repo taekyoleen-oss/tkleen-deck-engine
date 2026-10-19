@@ -1,0 +1,713 @@
+{
+ "format": "tkleen-deck",
+ "version": 1,
+ "meta": {
+  "title": "모션 견본",
+  "footer": "모션 견본 · 엔진 v1.6.0",
+  "brand": "tkLeen"
+ },
+ "motion": {
+  "level": "basic"
+ },
+ "slides": [
+  {
+   "id": "c",
+   "layout": "cover",
+   "kicker": "MOTION SAMPLES",
+   "title": "모션 견본",
+   "subtitle": "‘모션 제안해줘’ 목록의 효과를 쪽마다 보여 줍니다.\n쪽을 넘길 때마다 다시 재생되며, T 키를 누르면 Klein 스타일로 바꾸어 봅니다.",
+   "meta": [
+    [
+     "가–마",
+     "등장·강조·전개·쪽 넘김·쪽 단위 설정"
+    ],
+    [
+     "바–아",
+     "엔진 v1.6.0의 새 블록·이동·스타일"
+    ]
+   ]
+  },
+  {
+   "id": "e1",
+   "layout": "content",
+   "kicker": "가. 등장 효과",
+   "tag": "블록·항목",
+   "title": "등장 효과 — 항목마다 다르게 나타나기",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 3,
+     "items": [
+      {
+       "title": "떠오르기 (rise)",
+       "tag": "E1",
+       "text": "아래에서 살짝 떠오르며 나타납니다. 기본값입니다.",
+       "fx": "rise"
+      },
+      {
+       "title": "페이드 (fade)",
+       "tag": "E2",
+       "text": "제자리에서 흐릿하게 나타납니다.",
+       "fx": "fade"
+      },
+      {
+       "title": "왼쪽에서 (left)",
+       "tag": "E3",
+       "text": "왼쪽에서 밀려 들어옵니다.",
+       "fx": "left"
+      },
+      {
+       "title": "오른쪽에서 (right)",
+       "tag": "E4",
+       "text": "오른쪽에서 밀려 들어옵니다.",
+       "fx": "right"
+      },
+      {
+       "title": "위에서 (drop)",
+       "tag": "E5",
+       "text": "위에서 내려오며 나타납니다.",
+       "fx": "drop"
+      },
+      {
+       "title": "튀어나오기 (pop)",
+       "tag": "E6",
+       "text": "작게 시작해 살짝 커졌다가 자리를 잡습니다.",
+       "fx": "pop"
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": "E7 펼치기 (wipe) — 왼쪽부터 오른쪽으로 펼쳐집니다. 수식 띠·강조 글상자에 잘 어울립니다.",
+     "fx": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "e2",
+   "layout": "content",
+   "kicker": "나. 강조 효과",
+   "tag": "블록·항목",
+   "title": "강조 효과 — 나타난 뒤 한 번 더 눈길 끌기",
+   "blocks": [
+    {
+     "type": "row",
+     "ratio": "1:1",
+     "cols": [
+      [
+       {
+        "type": "section",
+        "no": "H1",
+        "title": "형광펜 (mark)",
+        "items": [
+         "**굵게 표시한 글자**에 형광펜이 그어집니다",
+         "핵심 용어 **수지상등의 원칙**처럼 쓰입니다"
+        ],
+        "fx": "mark"
+       },
+       {
+        "type": "section",
+        "no": "H2",
+        "title": "맥박 (pulse)",
+        "items": [
+         "다 나타난 뒤 테두리가 한 번 퍼져 나갑니다"
+        ],
+        "fx": "pulse"
+       },
+       {
+        "type": "stats",
+        "items": [
+         {
+          "value": "70,395",
+          "unit": "원",
+          "label": "H4 숫자 세기 (count)"
+         },
+         {
+          "value": "130",
+          "unit": "%",
+          "label": "0부터 올라갑니다"
+         }
+        ],
+        "fx": "count"
+       }
+      ],
+      [
+       {
+        "type": "math",
+        "items": [
+         {
+          "mathml": "<math><mn>10000</mn><mo>×</mo><mi>P</mi><mo>=</mo><mfrac><mn>1</mn><mn>1.05</mn></mfrac><mo>×</mo><mn>200</mn><mo>+</mo><mfrac><mn>1</mn><msup><mn>1.05</mn><mn>2</mn></msup></mfrac><mo>×</mo><mn>200</mn><mo>+</mo><mfrac><mn>1</mn><msup><mn>1.05</mn><mn>3</mn></msup></mfrac><mo>×</mo><mn>300</mn><mo>⇒</mo><mi>P</mi><mo>=</mo><mn>0.0631</mn></math>",
+          "text": "H3 수식 결과 상자 (result) — 마지막 ‘=’ 뒤에 상자"
+         }
+        ],
+        "fx": "result count",
+        "size": 22
+       },
+       {
+        "type": "table",
+        "head": [
+         "구분",
+         "금액"
+        ],
+        "rows": [
+         [
+          "사례 A",
+          "1,121,633"
+         ],
+         [
+          "사례 B",
+          "1,020,686"
+         ]
+        ],
+        "align": [
+         "l",
+         "r"
+        ],
+        "fx": "count"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e3",
+   "layout": "content",
+   "kicker": "다. 전개 효과",
+   "tag": "블록·쪽",
+   "title": "전개 효과 — 보이는 순서와 방법 바꾸기",
+   "steps": "blocks",
+   "blocks": [
+    {
+     "type": "section",
+     "no": "P1",
+     "title": "등장 순서 (order) — 이 섹션은 순서 3",
+     "items": [
+      "order 숫자가 작은 블록부터 나타납니다"
+     ],
+     "order": 3
+    },
+    {
+     "type": "callout",
+     "text": "P1 순서 1 — 이 글상자가 가장 먼저 나타납니다.",
+     "order": 1
+    },
+    {
+     "type": "section",
+     "no": "P2",
+     "title": "눌러서 보이기 (reveal)",
+     "items": [
+      "가려진 칸을 누르거나 R 키를 누르면 내용이 보입니다"
+     ],
+     "order": 2
+    },
+    {
+     "type": "section",
+     "no": "",
+     "title": "",
+     "items": [
+      "**답** : 이 줄이 가려져 있었습니다"
+     ],
+     "reveal": "답 보기",
+     "order": 2
+    },
+    {
+     "type": "callout",
+     "text": "P3 한 단계씩 (steps) — 오른쪽 위 ‘한 단계씩’ 단추나 S 키로 블록을 차례로 강조합니다.",
+     "order": "last"
+    }
+   ]
+  },
+  {
+   "id": "t1",
+   "layout": "content",
+   "kicker": "라. 쪽 넘김",
+   "tag": "쪽 단위",
+   "title": "T2 확대 진입 (enter: zoom)",
+   "motion": {
+    "enter": "zoom"
+   },
+   "blocks": [
+    {
+     "type": "text",
+     "text": "이 쪽은 살짝 작은 상태에서 커지며 들어옵니다. 쪽 넘김 효과는 쪽마다 따로 정할 수 있습니다. T1 교차 페이드(fade)가 기본값입니다."
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "layout": "content",
+   "kicker": "라. 쪽 넘김",
+   "tag": "쪽 단위",
+   "title": "T3 밀어 넣기 (enter: slide)",
+   "motion": {
+    "enter": "slide"
+   },
+   "blocks": [
+    {
+     "type": "text",
+     "text": "앞으로 넘기면 오른쪽에서, 뒤로 넘기면 왼쪽에서 밀려 들어옵니다."
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "layout": "content",
+   "kicker": "라. 쪽 넘김",
+   "tag": "쪽 단위",
+   "title": "T4 떠오르며 진입 (enter: rise)",
+   "motion": {
+    "enter": "rise"
+   },
+   "blocks": [
+    {
+     "type": "text",
+     "text": "쪽 전체가 아래에서 떠오르며 들어옵니다."
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "layout": "content",
+   "kicker": "라. 쪽 넘김",
+   "tag": "쪽 단위",
+   "title": "T5 즉시 전환 (enter: none)",
+   "motion": {
+    "enter": "none"
+   },
+   "blocks": [
+    {
+     "type": "text",
+     "text": "효과 없이 바로 바뀝니다. 같은 화면을 이어서 보여 줄 때 씁니다."
+    }
+   ]
+  },
+  {
+   "id": "s1",
+   "layout": "content",
+   "kicker": "마. 쪽 단위 설정",
+   "tag": "쪽 단위",
+   "title": "S1 천천히 (speed: slow) · S3 항목 단위 등장",
+   "motion": {
+    "speed": "slow",
+    "stagger": "items"
+   },
+   "blocks": [
+    {
+     "type": "list",
+     "items": [
+      "이 쪽만 등장이 1.5배 느립니다 (fast는 0.6배)",
+      "덱 단계가 ‘기본’이어도 이 쪽은 항목이 하나씩 나타납니다",
+      "S2 맥박(ring)·S4 링크 확대(zoom)·S5 막대 성장(grow)도 쪽마다 켜고 끌 수 있습니다"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b1",
+   "layout": "content",
+   "kicker": "바. 기존 블록 효과",
+   "tag": "블록",
+   "title": "막대 성장 (bars) · 보기 전환 (switch)",
+   "motion": {
+    "grow": true
+   },
+   "blocks": [
+    {
+     "type": "switch",
+     "views": [
+      {
+       "label": "막대",
+       "blocks": [
+        {
+         "type": "bars",
+         "unit": "원",
+         "items": [
+          {
+           "label": "사례 A",
+           "value": "1,121,633"
+          },
+          {
+           "label": "사례 B",
+           "value": "1,020,686",
+           "tone": "navy"
+          },
+          {
+           "label": "보험금",
+           "value": "631,033",
+           "tone": "amber"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "표",
+       "blocks": [
+        {
+         "type": "table",
+         "head": [
+          "구분",
+          "금액"
+         ],
+         "rows": [
+          [
+           "사례 A",
+           "1,121,633"
+          ],
+          [
+           "사례 B",
+           "1,020,686"
+          ],
+          [
+           "보험금",
+           "631,033"
+          ]
+         ],
+         "align": [
+          "l",
+          "r"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "H5 값 풍선 — 막대에 마우스를 올리면 값이 풍선으로 뜹니다 (v1.6.0, 끄려면 블록에 \"tip\": false)."
+    }
+   ]
+  },
+  {
+   "id": "v1",
+   "layout": "content",
+   "kicker": "사. 새 블록 (v1.6.0)",
+   "tag": "블록",
+   "title": "P6 누적 막대 (stack) — 부분이 합쳐 전체가 되는 모양",
+   "lead": "조각이 왼쪽부터 차례로 자라고, 아래 몫 막대는 한 조각이 전체에서 차지하는 비중을 보여 줍니다.",
+   "motion": {
+    "grow": true
+   },
+   "footnote": "값 풍선(H5): 조각과 몫 막대에 마우스를 올리면 값과 비율이 뜹니다. 막대 성장은 쪽 motion의 grow(S5)나 rich 단계에서 동작합니다.",
+   "blocks": [
+    {
+     "type": "row",
+     "ratio": "3:2",
+     "panel": 2,
+     "cols": [
+      [
+       {
+        "type": "stack",
+        "title": "보험료 100원의 구성 · 예시",
+        "unit": "원",
+        "share": 1,
+        "shareLabel": "보험료 중 위험보험료 비중",
+        "items": [
+         {
+          "label": "위험보험료",
+          "short": "위험",
+          "value": 62,
+          "note": "보험사고에 대비해 보험금으로 지급할 몫입니다."
+         },
+         {
+          "label": "저축보험료",
+          "short": "저축",
+          "value": 23
+         },
+         {
+          "label": "부가보험료",
+          "short": "부가",
+          "value": 15
+         }
+        ],
+        "caption": "세 조각의 합은 100원입니다 (설명용 예시 수치)."
+       }
+      ],
+      [
+       {
+        "type": "section",
+        "no": "P6",
+        "title": "쓰는 곳",
+        "items": [
+         "시간표·예산·보험료처럼 **합계가 정해진 구성**",
+         "몫 막대(share)로 한 조각의 비중을 강조"
+        ]
+       },
+       {
+        "type": "text",
+        "text": "원본에 값이 적혀 있을 때만 씁니다."
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "layout": "content",
+   "kicker": "사. 새 블록 (v1.6.0)",
+   "tag": "블록",
+   "title": "P7 100칸 격자 (grid) — 같은 구성을 칸 수로 보기",
+   "motion": {
+    "grow": true
+   },
+   "blocks": [
+    {
+     "type": "switch",
+     "ref": "mix",
+     "views": [
+      {
+       "label": "100칸 격자",
+       "blocks": [
+        {
+         "type": "grid",
+         "title": "보험료 100원의 구성 · 100칸",
+         "unit": "원",
+         "items": [
+          {
+           "label": "위험보험료",
+           "value": 62
+          },
+          {
+           "label": "저축보험료",
+           "value": 23
+          },
+          {
+           "label": "부가보험료",
+           "value": 15
+          }
+         ],
+         "caption": "한 칸 = 전체의 1% · 줄 단위로 채워집니다 (grow)"
+        }
+       ]
+      },
+      {
+       "label": "막대",
+       "blocks": [
+        {
+         "type": "bars",
+         "unit": "원",
+         "max": 100,
+         "items": [
+          {
+           "label": "위험보험료",
+           "value": 62
+          },
+          {
+           "label": "저축보험료",
+           "value": 23,
+           "tone": "navy"
+          },
+          {
+           "label": "부가보험료",
+           "value": 15,
+           "tone": "amber"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "격자의 칸에도 값 풍선이 뜹니다. 칸 수는 큰 나머지 방식으로 맞추어 합계가 늘 100칸입니다."
+    }
+   ]
+  },
+  {
+   "id": "v3",
+   "layout": "content",
+   "kicker": "사. 새 블록 (v1.6.0)",
+   "tag": "블록",
+   "title": "P8 레버 계산기 (sim) — 레버를 움직이면 막대가 새 값으로",
+   "footnote": "1년 정기보험의 순보험료 예시: P = S × q ÷ (1 + i), 보험금은 연말 지급. 설명용 계산이며 실제 상품의 보험료가 아닙니다.",
+   "blocks": [
+    {
+     "type": "sim",
+     "ref": "calc",
+     "title": "기준 계약과 지금 계약",
+     "variables": [
+      {
+       "key": "s",
+       "label": "보험가입금액",
+       "unit": "만원",
+       "min": 1000,
+       "max": 10000,
+       "step": 500,
+       "default": 5000,
+       "baseline": 5000
+      },
+      {
+       "key": "q",
+       "label": "사망률",
+       "unit": "‰",
+       "min": 0.5,
+       "max": 10,
+       "step": 0.5,
+       "default": 2,
+       "baseline": 2
+      },
+      {
+       "key": "r",
+       "label": "1 + 이율",
+       "unit": "",
+       "short": "",
+       "min": 1,
+       "max": 1.1,
+       "step": 0.005,
+       "default": 1.03,
+       "baseline": 1.03
+      }
+     ],
+     "metrics": [
+      {
+       "label": "순보험료",
+       "unit": "원",
+       "decimals": 0,
+       "formula": {
+        "type": "product",
+        "coefficient": 10,
+        "powers": [
+         1,
+         1,
+         -1
+        ]
+       },
+       "expression": "S × q ÷ (1+i)",
+       "explanation": "가입금액(만원)×10,000 × 사망률(‰)÷1,000 ÷ (1+i)로 계산합니다."
+      },
+      {
+       "label": "기대 보험금",
+       "unit": "원",
+       "decimals": 0,
+       "formula": {
+        "type": "product",
+        "coefficient": 10,
+        "powers": [
+         1,
+         1,
+         0
+        ]
+       },
+       "expression": "S × q",
+       "explanation": "할인하지 않은 기대 보험금입니다."
+      }
+     ],
+     "labels": {
+      "baseline": "기준 계약",
+      "current": "지금 계약"
+     }
+    }
+   ]
+  },
+  {
+   "id": "v4",
+   "layout": "content",
+   "kicker": "아. 이동 (v1.6.0)",
+   "tag": "링크·키",
+   "title": "P9 이동 후 강조 (goRef) · P10 보기 지정 (goView) · 숫자 키 이동",
+   "blocks": [
+    {
+     "type": "cards",
+     "cols": 2,
+     "items": [
+      {
+       "tag": "P9 · P10",
+       "title": "격자 보기로 바로 가기",
+       "text": "격자 견본 쪽의 switch를 **두 번째 보기(막대)**로 열고, 도착하면 그 블록에 맥박을 줍니다.",
+       "go": "v2",
+       "goLabel": "막대 보기로",
+       "goView": 2,
+       "goRef": "mix"
+      },
+      {
+       "tag": "P9",
+       "title": "계산기로 가서 강조",
+       "text": "계산기 견본 쪽으로 이동한 뒤 레버 계산기 블록(ref: calc)에 맥박을 줍니다.",
+       "go": "v3",
+       "goLabel": "계산기로",
+       "goRef": "calc"
+      }
+     ]
+    },
+    {
+     "type": "callout",
+     "text": "**숫자 키 이동** — 숫자를 누르고 Enter를 누르면 그 쪽으로 바로 갑니다. 예: 1 → 2 → Enter. Enter를 누르지 않아도 1초 뒤에 이동합니다. ‘↩ 돌아가기’로 되돌아옵니다."
+    }
+   ]
+  },
+  {
+   "id": "k1",
+   "layout": "content",
+   "kicker": "자. 스타일과 양식 (v1.6.0)",
+   "tag": "theme.style",
+   "title": "스타일 두 가지 — 같은 JSON, 다른 모양",
+   "lead": "T 키를 누르면 이 견본 전체가 Klein 스타일로 바뀝니다. 파일에는 저장되지 않습니다.",
+   "footnote": "쪽 하단 안내문(footnote) — 주의 문구·자료 기준처럼 쪽 아래에 한두 줄로 두는 글입니다.",
+   "blocks": [
+    {
+     "type": "row",
+     "ratio": "1:1",
+     "panel": 2,
+     "cols": [
+      [
+       {
+        "type": "cards",
+        "cols": 1,
+        "items": [
+         {
+          "title": "기본 (tkleen)",
+          "text": "지금 방식입니다. Sky Blue #4A90C2, 둥근 카드, Fraunces 숫자를 씁니다."
+         },
+         {
+          "title": "Klein (klein)",
+          "text": "참조 파일 motion-template.html의 스타일입니다. 클라인 블루 #002FA7, 직각 패널, 주황 강조색 #FF7A00을 씁니다.",
+          "tone": "sky"
+         }
+        ]
+       }
+      ],
+      [
+       {
+        "type": "stats",
+        "items": [
+         {
+          "value": "100",
+          "unit": "원",
+          "label": "보험료 예시 · 오른쪽 열은 panel",
+          "noteTitle": "보험료 100원의 내역",
+          "noteRows": [
+           [
+            "위험보험료",
+            "62원"
+           ],
+           [
+            "저축보험료",
+            "23원"
+           ],
+           [
+            "부가보험료",
+            "15원"
+           ],
+           [
+            "합계",
+            "100원"
+           ]
+          ],
+          "note": "내역 표(noteRows)는 추가 설명 창·서랍·인쇄 부록에 함께 나옵니다."
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": "숫자 칸을 누르면 **내역 표**가 열립니다. Klein 스타일에서는 ‘내역 보기 ›’로 표시됩니다."
+       }
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
